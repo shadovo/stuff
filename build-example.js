@@ -151,4 +151,4 @@ const mainWithContent = mainTemplate
   .replace('{scripts}', '')
   .replace('{styles}', '');
 
-fs.writeFileSync(path.join(__dirname, 'examples', 'index.html'), mainWithContent);
+fs.writeFileSync(path.join(__dirname, 'index.html'), mainWithContent);

@@ -1,0 +1,38 @@
+/**
+ * Animation shaking for attention
+ *
+ * @section Attention shake
+ *
+ * @example <p class="attention-bounce" style="padding: 8px 16px; background: var(--color-main)">Hover over me!</p>
+ */
+
+@keyframes attention-bounce {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(0deg) scale(1.4);
+  }
+  30% {
+    transform: rotate(10deg) scale(1.4);
+  }
+  40% {
+    transform: rotate(-10deg) scale(1.4);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.4);
+  }
+  55% {
+    transform: rotate(0deg) scale(1.4);
+  }
+  70% {
+    transform: rotate(0deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.attention-bounce:hover {
+  animation: attention-bounce 1s 1 ease-in-out;
+}

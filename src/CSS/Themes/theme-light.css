@@ -1,0 +1,28 @@
+/**
+ * Light theme compatible with basic.css styling
+ *
+ * @section Light theme
+ *
+ * @example <div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-main)">Main color</div></div>
+ * @example <div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-accent)">Accent color</div></div>
+ * @example <div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-content-background)">Content background color</div></div>
+ * @example <div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-site-background)">Background color</div></div>
+ */
+
+.theme--light {
+  --max-width: 1200px;
+  --gap: 16px;
+  --rounding: 6px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --color-text: #262626;
+  --color-main: #6699ff;
+  --color-main-complimentary: #ffffff;
+  --color-accent: #ff6699;
+  --color-accent-complimentary: #ffffff;
+  --color-site-background: #e8e8e8;
+  --color-content-background: #ffffff;
+  --color-content-accent: #ededed;
+  --shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+  --font-size-base: 18px;
+}

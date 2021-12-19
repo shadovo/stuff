@@ -1,0 +1,62 @@
+/**
+ * Collection of buttons
+ *
+ * With multiline description
+ * this is cool.
+ *
+ * @section Buttons
+ *
+ * @example <button class="button">Button</button>
+ * @example <button class="button--accent">Accent button</button>
+ * @example <button class="button--outline">Outline button</button>
+ * @example <button class="button--outline-accent">Accent outline</button>
+ */
+
+button,
+.button,
+.button--accent,
+.button--outline,
+.button--outline-accent {
+  padding: calc(var(--gap) - 3px) calc(var(--gap) * 2);
+  border-radius: var(--rounding);
+  background-color: var(--color-main);
+  border: 3px solid var(--color-main);
+  color: var(--color-accent-complimentary);
+  box-shadow: var(--shadow);
+  font: var(--font);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.button--accent,
+.button--outline-accent {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.button--outline,
+.button--outline-accent {
+  background-color: var(--color-content-background);
+  color: var(--color-main);
+}
+
+.button--outline-accent {
+  color: var(--color-accent);
+}
+
+button:hover,
+.button:hover,
+.button--accent:hover,
+.button--outline:hover,
+.button--outline-accent:hover {
+  filter: brightness(110%);
+}
+
+button:active,
+.button:active,
+.button--accent:active,
+.button--outline:active,
+.button--outline-accent:active {
+  filter: brightness(98%);
+}

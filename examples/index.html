@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en" class="theme--dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shadovos collection of usefull stuff</title>
+    <link rel="stylesheet" href="/src/CSS/Themes/theme-light.css" />
+    <link rel="stylesheet" href="/src/CSS/Themes/theme-dark.css" />
+    <link rel="stylesheet" href="/src/CSS/Globals/normalize.css" />
+    <link rel="stylesheet" href="/src/CSS/Globals/basic.css" />
+    <link rel="stylesheet" href="/src/CSS/Elements/button.css" />
+    <link rel="stylesheet" href="/src/CSS/Animations/attention-shake.css" />
+    
+  </head>
+  <body>
+    <header>
+      <h1>Shadovos collection of usefull stuff</h1>
+    </header>
+    <nav>{navigation}</nav>
+    <main>
+    <section>
+        <h2>CSS</h2>
+        <section>
+            
+    <section>
+        <h3>Animations</h3>
+        <article id="{name}" class="box">
+  <header>
+    <h4>Attention shake</h4>
+  </header>
+  <section>
+    <div><p>Animation shaking for attention</p></div>
+    <details>
+  <summary>Attention shake file</summary>
+  <code>
+    <pre>/**
+ * Animation shaking for attention
+ *
+ * @section Attention shake
+ *
+ * @example &#60;p class="attention-bounce" style="padding: 8px 16px; background: var(--color-main)"&#62;Hover over me!&#60;/p&#62;
+ */
+
+@keyframes attention-bounce {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(0deg) scale(1.4);
+  }
+  30% {
+    transform: rotate(10deg) scale(1.4);
+  }
+  40% {
+    transform: rotate(-10deg) scale(1.4);
+  }
+  50% {
+    transform: rotate(10deg) scale(1.4);
+  }
+  55% {
+    transform: rotate(0deg) scale(1.4);
+  }
+  70% {
+    transform: rotate(0deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.attention-bounce:hover {
+  animation: attention-bounce 1s 1 ease-in-out;
+}
+</pre>
+  </code>
+</details> <details>
+      <summary>Attention shake examples</summary>
+      <ul>
+        <li>
+              <p class="attention-bounce" style="padding: 8px 16px; background: var(--color-main)">Hover over me!</p>
+              <code>&#60;p class="attention-bounce" style="padding: 8px 16px; background: var(--color-main)"&#62;Hover over me!&#60;/p&#62;</code>
+          </li>
+      </ul>
+    </details>
+    <div class="flex--row"><p class="attention-bounce" style="padding: 8px 16px; background: var(--color-main)">Hover over me!</p></div>
+  </section>
+</article>
+    </section>
+    
+    <section>
+        <h3>Elements</h3>
+        <article id="{name}" class="box">
+  <header>
+    <h4>Buttons</h4>
+  </header>
+  <section>
+    <div><p>Collection of buttons</p><p></p><p>With multiline description</p><p>this is cool.</p></div>
+    <details>
+  <summary>Buttons file</summary>
+  <code>
+    <pre>/**
+ * Collection of buttons
+ *
+ * With multiline description
+ * this is cool.
+ *
+ * @section Buttons
+ *
+ * @example &#60;button class="button"&#62;Button&#60;/button&#62;
+ * @example &#60;button class="button--accent"&#62;Accent button&#60;/button&#62;
+ * @example &#60;button class="button--outline"&#62;Outline button&#60;/button&#62;
+ * @example &#60;button class="button--outline-accent"&#62;Accent outline&#60;/button&#62;
+ */
+
+button,
+.button,
+.button--accent,
+.button--outline,
+.button--outline-accent {
+  padding: calc(var(--gap) - 3px) calc(var(--gap) * 2);
+  border-radius: var(--rounding);
+  background-color: var(--color-main);
+  border: 3px solid var(--color-main);
+  color: var(--color-accent-complimentary);
+  box-shadow: var(--shadow);
+  font: var(--font);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.button--accent,
+.button--outline-accent {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.button--outline,
+.button--outline-accent {
+  background-color: var(--color-content-background);
+  color: var(--color-main);
+}
+
+.button--outline-accent {
+  color: var(--color-accent);
+}
+
+button:hover,
+.button:hover,
+.button--accent:hover,
+.button--outline:hover,
+.button--outline-accent:hover {
+  filter: brightness(110%);
+}
+
+button:active,
+.button:active,
+.button--accent:active,
+.button--outline:active,
+.button--outline-accent:active {
+  filter: brightness(98%);
+}
+</pre>
+  </code>
+</details> <details>
+      <summary>Buttons examples</summary>
+      <ul>
+        <li>
+              <button class="button">Button</button>
+              <code>&#60;button class="button"&#62;Button&#60;/button&#62;</code>
+          </li><li>
+              <button class="button--accent">Accent button</button>
+              <code>&#60;button class="button--accent"&#62;Accent button&#60;/button&#62;</code>
+          </li><li>
+              <button class="button--outline">Outline button</button>
+              <code>&#60;button class="button--outline"&#62;Outline button&#60;/button&#62;</code>
+          </li><li>
+              <button class="button--outline-accent">Accent outline</button>
+              <code>&#60;button class="button--outline-accent"&#62;Accent outline&#60;/button&#62;</code>
+          </li>
+      </ul>
+    </details>
+    <div class="flex--row"><button class="button">Button</button><button class="button--accent">Accent button</button><button class="button--outline">Outline button</button><button class="button--outline-accent">Accent outline</button></div>
+  </section>
+</article>
+    </section>
+    
+    <section>
+        <h3>Globals</h3>
+        <article id="{name}" class="box">
+  <header>
+    <h4>Base style</h4>
+  </header>
+  <section>
+    <div><p>Basic styling</p></div>
+    <details>
+  <summary>Base style file</summary>
+  <code>
+    <pre>/**
+ * Basic styling
+ *
+ * @section Base style
+ */
+
+/* prettier-ignore */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a,
+abbr, acronym, address, big, cite, code, del, dfn,
+em, img, ins, kbd, q, s, samp, small, strike, strong,
+sub, sup, tt, var, b, u, i, center, dl, dt, dd,
+ol, ul, li, fieldset, form, label, legend, table,
+caption, tbody, tfoot, thead, tr, th, td, article,
+aside, canvas, details, embed,  figure, figcaption,
+footer, header, hgroup,  menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+    box-sizing: border-box;
+}
+
+/* prettier-ignore */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  max-width: var(--max-width);
+  padding: var(--gap);
+  background: var(--color-site-background);
+  color: var(--color-text);
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 150px 1fr auto;
+  grid-column-gap: var(--gap);
+  grid-row-gap: var(--gap);
+  font-size: var(--font-size-base);
+}
+
+body &#62; header {
+  grid-area: 1 / 1 / 2 / 3;
+}
+body &#62; nav {
+  grid-area: 2 / 2 / 3 / 2;
+}
+body &#62; main {
+  grid-area: 2 / 1 / 3 / 2;
+}
+body &#62; footer {
+  grid-area: 3 / 1 / 4 / 3;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--gap) * 2);
+  align-self: flex-start;
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+h2 {
+  font-size: 2.2em;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+h4 {
+  font-size: 1.3em;
+}
+
+article,
+section {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+article &#62; header {
+  padding-bottom: calc(var(--gap) / 2);
+  border-bottom: 3px solid var(--color-site-background);
+}
+
+nav {
+  top: var(--gap);
+  position: sticky;
+  width: 260px;
+  align-self: flex-start;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  align-items: baseline;
+  padding-bottom: var(--gap);
+  border-bottom: 2px solid var(--color-content-accent);
+}
+li:last-child {
+  border-bottom: none;
+}
+
+details[open] &#62; summary {
+  margin-bottom: var(--gap);
+}
+
+details[open] ~ div {
+  display: none;
+}
+
+p {
+  min-height: 0.5em;
+}
+
+a,
+summary {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+a:hover,
+summary:hover {
+  text-decoration: underline;
+}
+
+code {
+  padding: calc(var(--gap) / 2) var(--gap);
+  background-color: var(--color-content-accent);
+  display: inline-block;
+  width: 100%;
+}
+
+pre {
+  white-space: pre-wrap;
+  width: 100%;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.flex,
+.flex--row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+.flex--row {
+  flex-direction: row;
+}
+
+.box {
+  border-radius: var(--rounding);
+  box-shadow: var(--shadow);
+  padding: var(--gap);
+  gap: var(--gap);
+  display: flex;
+  background-color: var(--color-content-background);
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+</pre>
+  </code>
+</details> 
+  </section>
+</article><article id="{name}" class="box">
+  <header>
+    <h4>Normalize</h4>
+  </header>
+  <section>
+    <div><p>normalize.css v8.0.1 | MIT License | <a href="https://www.github.com/necolas/normalize.css" target="_blank" rel="noopener">github.com/necolas/normalize.css</a></p></div>
+    <details>
+  <summary>Normalize file</summary>
+  <code>
+    <pre>/**
+ * normalize.css v8.0.1 | MIT License | &#60;a href="https://www.github.com/necolas/normalize.css" target="_blank" rel="noopener"&#62;github.com/necolas/normalize.css&#60;/a&#62;
+ *
+ * @section Normalize
+ */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections ========================================================================== */
+
+/**
+  * Remove the margin in all browsers.
+  */
+body {
+  margin: 0;
+}
+
+/**
+  * Render the `main` element consistently in IE.
+  */
+main {
+  display: block;
+}
+
+/**
+  * Correct the font size and margin on `h1` elements within `section` and
+  * `article` contexts in Chrome, Firefox, and Safari.
+  */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content ========================================================================== */
+
+/**
+  * 1. Add the correct box sizing in Firefox.
+  * 2. Show the overflow in Edge and IE.
+  */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+  * 1. Correct the inheritance and scaling of font size in all browsers.
+  * 2. Correct the odd `em` font sizing in all browsers.
+  */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics ========================================================================== */
+
+/**
+  * Remove the gray background on active links in IE 10.
+  */
+a {
+  background-color: transparent;
+}
+
+/**
+  * 1. Remove the bottom border in Chrome 57-
+  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+  */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+  * Add the correct font weight in Chrome, Edge, and Safari.
+  */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+  * 1. Correct the inheritance and scaling of font size in all browsers.
+  * 2. Correct the odd `em` font sizing in all browsers.
+  */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+  * Add the correct font size in all browsers.
+  */
+small {
+  font-size: 80%;
+}
+
+/**
+  * Prevent `sub` and `sup` elements from affecting the line height in
+  * all browsers.
+  */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content ========================================================================== */
+
+/**
+  * Remove the border on images inside links in IE 10.
+  */
+img {
+  border-style: none;
+}
+
+/* Forms ========================================================================== */
+
+/**
+  * 1. Change the font styles in all browsers.
+  * 2. Remove the margin in Firefox and Safari.
+  */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+  * Show the overflow in IE.
+  * 1. Show the overflow in Edge.
+  */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+  * Remove the inheritance of text transform in Edge, Firefox, and IE.
+  * 1. Remove the inheritance of text transform in Firefox.
+  */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+  * Correct the inability to style clickable types in iOS and Safari.
+  */
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+}
+
+/**
+  * Remove the inner border and padding in Firefox.
+  */
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+  * Restore the focus styles unset by the previous rule.
+  */
+button:-moz-focusring,
+[type='button']:-moz-focusring,
+[type='reset']:-moz-focusring,
+[type='submit']:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+  * Correct the padding in Firefox.
+  */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+  * 1. Correct the text wrapping in Edge and IE.
+  * 2. Correct the color inheritance from `fieldset` elements in IE.
+  * 3. Remove the padding so developers are not caught out when they zero out
+  *    `fieldset` elements in all browsers.
+  */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+  */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+  * Remove the default vertical scrollbar in IE 10+.
+  */
+textarea {
+  overflow: auto;
+}
+
+/**
+  * 1. Add the correct box sizing in IE 10.
+  * 2. Remove the padding in IE 10.
+  */
+[type='checkbox'],
+[type='radio'] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+  * Correct the cursor style of increment and decrement buttons in Chrome.
+  */
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+  * 1. Correct the odd appearance in Chrome and Safari.
+  * 2. Correct the outline style in Safari.
+  */
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+  * Remove the inner padding in Chrome and Safari on macOS.
+  */
+[type='search']::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+  * 1. Correct the inability to style clickable types in iOS and Safari.
+  * 2. Change font properties to `inherit` in Safari.
+  */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive ========================================================================== */
+
+/**
+  * Add the correct display in Edge, IE 10+, and Firefox.
+  */
+details {
+  display: block;
+}
+
+/**
+  * Add the correct display in all browsers.
+  */
+summary {
+  display: list-item;
+}
+
+/* Misc ========================================================================== */
+
+/**
+  * Add the correct display in IE 10+.
+  */
+template {
+  display: none;
+}
+
+/**
+  * Add the correct display in IE 10.
+  */
+[hidden] {
+  display: none;
+}
+</pre>
+  </code>
+</details> 
+  </section>
+</article>
+    </section>
+    
+    <section>
+        <h3>Themes</h3>
+        <article id="{name}" class="box">
+  <header>
+    <h4>Dark theme</h4>
+  </header>
+  <section>
+    <div><p>Dark theme compatible with basic.css styling</p></div>
+    <details>
+  <summary>Dark theme file</summary>
+  <code>
+    <pre>/**
+ * Dark theme compatible with basic.css styling
+ *
+ * @section Dark theme
+ *
+ * @example &#60;div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-main)"&#62;Main color&#60;/div&#62;
+ * @example &#60;div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-accent)"&#62;Accent color&#60;/div&#62;
+ * @example &#60;div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-content-background)"&#62;Content background color&#60;/div&#62;
+ * @example &#60;div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-site-background)"&#62;Background color&#60;/div&#62;
+ */
+
+.theme--dark {
+  --max-width: 1200px;
+  --gap: 16px;
+  --rounding: 6px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --color-text: #f9f9f9;
+  --color-main: #6699ff;
+  --color-main-complimentary: #ffffff;
+  --color-accent: #ff6699;
+  --color-accent-complimentary: #ffffff;
+  --color-site-background: #161518;
+  --color-content-background: #323240;
+  --color-content-accent: #242325;
+  --shadow: 0 5px 0 rgba(0, 0, 0, 0.2);
+  --font-size-base: 18px;
+}
+</pre>
+  </code>
+</details> <details>
+      <summary>Dark theme examples</summary>
+      <ul>
+        <li>
+              <div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-main)">Main color</div>
+              <code>&#60;div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-main)"&#62;Main color&#60;/div&#62;</code>
+          </li><li>
+              <div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-accent)">Accent color</div>
+              <code>&#60;div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-accent)"&#62;Accent color&#60;/div&#62;</code>
+          </li><li>
+              <div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-content-background)">Content background color</div>
+              <code>&#60;div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-content-background)"&#62;Content background color&#60;/div&#62;</code>
+          </li><li>
+              <div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-site-background)">Background color</div>
+              <code>&#60;div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-site-background)"&#62;Background color&#60;/div&#62;</code>
+          </li>
+      </ul>
+    </details>
+    <div class="flex--row"><div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-main)">Main color</div><div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-accent)">Accent color</div><div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-content-background)">Content background color</div><div class="theme--dark" style="padding: var(--gap); color: var(--color-text); background-color:var(--color-site-background)">Background color</div></div>
+  </section>
+</article><article id="{name}" class="box">
+  <header>
+    <h4>Light theme</h4>
+  </header>
+  <section>
+    <div><p>Light theme compatible with basic.css styling</p></div>
+    <details>
+  <summary>Light theme file</summary>
+  <code>
+    <pre>/**
+ * Light theme compatible with basic.css styling
+ *
+ * @section Light theme
+ *
+ * @example &#60;div class="theme--light"&#62;&#60;div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-main)"&#62;Main color&#60;/div&#62;&#60;/div&#62;
+ * @example &#60;div class="theme--light"&#62;&#60;div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-accent)"&#62;Accent color&#60;/div&#62;&#60;/div&#62;
+ * @example &#60;div class="theme--light"&#62;&#60;div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-content-background)"&#62;Content background color&#60;/div&#62;&#60;/div&#62;
+ * @example &#60;div class="theme--light"&#62;&#60;div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-site-background)"&#62;Background color&#60;/div&#62;&#60;/div&#62;
+ */
+
+.theme--light {
+  --max-width: 1200px;
+  --gap: 16px;
+  --rounding: 6px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --color-text: #262626;
+  --color-main: #6699ff;
+  --color-main-complimentary: #ffffff;
+  --color-accent: #ff6699;
+  --color-accent-complimentary: #ffffff;
+  --color-site-background: #e8e8e8;
+  --color-content-background: #ffffff;
+  --color-content-accent: #ededed;
+  --shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+  --font-size-base: 18px;
+}
+</pre>
+  </code>
+</details> <details>
+      <summary>Light theme examples</summary>
+      <ul>
+        <li>
+              <div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-main)">Main color</div></div>
+              <code>&#60;div class="theme--light"&#62;&#60;div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-main)"&#62;Main color&#60;/div&#62;&#60;/div&#62;</code>
+          </li><li>
+              <div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-accent)">Accent color</div></div>
+              <code>&#60;div class="theme--light"&#62;&#60;div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-accent)"&#62;Accent color&#60;/div&#62;&#60;/div&#62;</code>
+          </li><li>
+              <div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-content-background)">Content background color</div></div>
+              <code>&#60;div class="theme--light"&#62;&#60;div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-content-background)"&#62;Content background color&#60;/div&#62;&#60;/div&#62;</code>
+          </li><li>
+              <div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-site-background)">Background color</div></div>
+              <code>&#60;div class="theme--light"&#62;&#60;div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-site-background)"&#62;Background color&#60;/div&#62;&#60;/div&#62;</code>
+          </li>
+      </ul>
+    </details>
+    <div class="flex--row"><div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-main)">Main color</div></div><div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-accent)">Accent color</div></div><div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-content-background)">Content background color</div></div><div class="theme--light"><div style="padding: var(--gap); color: var(--color-text); background-color:var(--color-site-background)">Background color</div></div></div>
+  </section>
+</article>
+    </section>
+    
+        </section>
+    </section>
+    <section>
+        <h2>JavaScript</h2>
+        <section>
+            
+    <section>
+        <h3>Encoding</h3>
+        <article id="{name}" class="box">
+  <header>
+    <h4>Encode HTML</h4>
+  </header>
+  <section>
+    <div><p>Encode a string to be HTML-safe.</p></div>
+    <details>
+  <summary>Encode HTML file</summary>
+  <code>
+    <pre>/**
+ * Encode a string to be HTML-safe.
+ *
+ * @section Encode HTML
+ *
+ * @example encodeHTML('&#60;h1&#62;Hello&#60;/h1&#62;') // =&#62; '&#38;lt;h1&#38;gt;Hello&#38;lt;/h1&#38;gt;'
+ */
+
+function encodeHTML(str) {
+  return str.replace(/[\u00A0-\u9999&#60;&#62;\&#38;]/g, function (i) {
+    return '&#38;#' + i.charCodeAt(0) + ';';
+  });
+}
+
+module.exports = encodeHTML;
+</pre>
+  </code>
+</details> <details>
+      <summary>Encode HTML examples</summary>
+      <ul>
+        <li>
+              
+              <code>encodeHTML('&#60;h1&#62;Hello&#60;/h1&#62;') // =&#62; '&#38;lt;h1&#38;gt;Hello&#38;lt;/h1&#38;gt;'</code>
+          </li>
+      </ul>
+    </details>
+    
+  </section>
+</article>
+    </section>
+    
+        </section>
+    </section></main>
+    <footer>Snippets created and/or liked by Shadovo</footer>
+    
+  </body>
+</html>

@@ -10,12 +10,12 @@ const mainTemplate = `<!DOCTYPE html>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
-    <link rel="stylesheet" href="/src/CSS/Themes/theme-light.css" />
-    <link rel="stylesheet" href="/src/CSS/Themes/theme-dark.css" />
-    <link rel="stylesheet" href="/src/CSS/Globals/normalize.css" />
-    <link rel="stylesheet" href="/src/CSS/Globals/basic.css" />
-    <link rel="stylesheet" href="/src/CSS/Elements/button.css" />
-    <link rel="stylesheet" href="/src/CSS/Animations/attention-shake.css" />
+    <link rel="stylesheet" href="./src/CSS/Themes/theme-light.css" />
+    <link rel="stylesheet" href="./src/CSS/Themes/theme-dark.css" />
+    <link rel="stylesheet" href="./src/CSS/Globals/normalize.css" />
+    <link rel="stylesheet" href="./src/CSS/Globals/basic.css" />
+    <link rel="stylesheet" href="./src/CSS/Elements/button.css" />
+    <link rel="stylesheet" href="./src/CSS/Animations/attention-shake.css" />
     {styles}
   </head>
   <body>
